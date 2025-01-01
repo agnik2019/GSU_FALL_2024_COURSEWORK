@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-enabled skin-theme-clientpref-day vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Capability-based security - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-enabled skin-theme-clientpref-day vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy",
+"wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e3bc3623-a776-4ac5-8c0b-187b6dd21fe9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Capability-based_security","wgTitle":"Capability-based security","wgCurRevisionId":1233505110,"wgRevisionId":1233505110,"wgArticleId":539717,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description is different from Wikidata","Computer security models","Access control","Capability systems"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Capability-based_security","wgRelevantArticleId":539717,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia",
+"wgCiteReferencePreviewsActive":false,"wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":10000,"wgULSCurrentAutonym":"English","wgRelatedArticlesCompat":[],"wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q1094291","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,
+"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","ext.cite.styles":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","jquery.makeCollapsible.styles":"ready","ext.wikimediamessages.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init",
+"ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.growthExperiments.SuggestedEditSession","wikibase.sidebar.tracking"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cjquery.makeCollapsible.styles%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.43.0-wmf.23">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="Capability-based security - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="//en.m.wikipedia.org/wiki/Capability-based_security">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Capability-based_security&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Capability-based_security">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Capability-based_security rootpage-Capability-based_security skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"  >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=Capability-based+security" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=Capability-based+security" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Capability-based+security" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Capability-based+security" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Introduction"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Introduction">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>Introduction</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Introduction-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Examples"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Examples">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">2</span>
+				<span>Examples</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Examples-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Sharing_between_processes"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Sharing_between_processes">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">3</span>
+				<span>Sharing between processes</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Sharing_between_processes-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-POSIX_capabilities"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#POSIX_capabilities">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">4</span>
+				<span>POSIX capabilities</span>
+			</div>
+		</a>
+		
+		<ul id="toc-POSIX_capabilities-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Implementations"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Implementations">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">5</span>
+				<span>Implementations</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Implementations-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">6</span>
+				<span>References</span>
+			</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Further_reading"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Further_reading">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">7</span>
+				<span>Further reading</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Further_reading-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-External_links"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#External_links">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">8</span>
+				<span>External links</span>
+			</div>
+		</a>
+		
+		<ul id="toc-External_links-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Capability-based security</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 6 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-6" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">6 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-cs mw-list-item"><a href="https://cs.wikipedia.org/wiki/Zabezpe%C4%8Den%C3%AD_zalo%C5%BEen%C3%A9_na_zp%C5%AFsobilosti" title="Zabezpečení založené na způsobilosti – Czech" lang="cs" hreflang="cs" data-title="Zabezpečení založené na způsobilosti" data-language-autonym="Čeština" data-language-local-name="Czech" class="interlanguage-link-target"><span>Čeština</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="https://de.wikipedia.org/wiki/Capability-based_security" title="Capability-based security – German" lang="de" hreflang="de" data-title="Capability-based security" data-language-autonym="Deutsch" data-language-local-name="German" class="interlanguage-link-target"><span>Deutsch</span></a></li><li class="interlanguage-link interwiki-it mw-list-item"><a href="https://it.wikipedia.org/wiki/Capability" title="Capability – Italian" lang="it" hreflang="it" data-title="Capability" data-language-autonym="Italiano" data-language-local-name="Italian" class="interlanguage-link-target"><span>Italiano</span></a></li><li class="interlanguage-link interwiki-lmo mw-list-item"><a href="https://lmo.wikipedia.org/wiki/Capability" title="Capability – Lombard" lang="lmo" hreflang="lmo" data-title="Capability" data-language-autonym="Lombard" data-language-local-name="Lombard" class="interlanguage-link-target"><span>Lombard</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/Capability-based_security" title="Capability-based security – Japanese" lang="ja" hreflang="ja" data-title="Capability-based security" data-language-autonym="日本語" data-language-local-name="Japanese" class="interlanguage-link-target"><span>日本語</span></a></li><li class="interlanguage-link interwiki-vi mw-list-item"><a href="https://vi.wikipedia.org/wiki/An_ninh_tr%C3%AAn_c%C6%A1_s%E1%BB%9F_n%C4%83ng_l%E1%BB%B1c_ti%E1%BB%81m_t%C3%A0ng" title="An ninh trên cơ sở năng lực tiềm tàng – Vietnamese" lang="vi" hreflang="vi" data-title="An ninh trên cơ sở năng lực tiềm tàng" data-language-autonym="Tiếng Việt" data-language-local-name="Vietnamese" class="interlanguage-link-target"><span>Tiếng Việt</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1094291#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Capability-based_security" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:Capability-based_security" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Capability-based_security"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Capability-based_security&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Capability-based_security&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Capability-based_security"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Capability-based_security&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Capability-based_security&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Capability-based_security" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Capability-based_security" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Capability-based_security&amp;oldid=1233505110" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Capability-based_security&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Capability-based_security&amp;id=1233505110&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCapability-based_security"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCapability-based_security"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1094291" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Capability-based_security&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Capability-based_security&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects emptyPortlet"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Computer safety concept</div>
+<p><b>Capability-based security</b> is a concept in the design of <a href="/wiki/Computer_security" title="Computer security">secure computing</a> systems, one of the existing <a href="/wiki/Computer_security_model" title="Computer security model">security models</a>. A <b>capability</b> (known in some systems as a <b>key</b>) is a communicable, unforgeable <a href="/wiki/Access_token" title="Access token">token</a> of authority. It refers to a value that <a href="/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> an <a href="/wiki/Object_(computer_science)" title="Object (computer science)">object</a> along with an associated set of <a href="/wiki/Access_control" title="Access control">access rights</a>. A <a href="/wiki/User_(computing)" title="User (computing)">user</a> <a href="/wiki/Computer_program" title="Computer program">program</a> on a <a href="/wiki/Capability-based_operating_system" title="Capability-based operating system">capability-based operating system</a> must use a capability to access an object. Capability-based security refers to the principle of designing user programs such that they directly share capabilities with each other according to the <a href="/wiki/Principle_of_least_privilege" title="Principle of least privilege">principle of least privilege</a>, and to the operating system infrastructure necessary to make such transactions efficient and secure. Capability-based security is to be contrasted with an approach that uses <a href="/wiki/File-system_permissions" title="File-system permissions">traditional UNIX permissions</a> and <a href="/wiki/Access-control_list" title="Access-control list">Access Control Lists</a>.
+</p><p>Although most operating systems implement a facility which resembles capabilities, they typically do not provide enough support to allow for the exchange of capabilities among possibly mutually untrusting entities to be the primary means of granting and distributing access rights throughout the system. A capability-based system, in contrast, is designed with that goal in mind.
+</p>
+<meta property="mw:PageProp/toc" />
+<div class="mw-heading mw-heading2"><h2 id="Introduction">Introduction</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=1" title="Edit section: Introduction"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>Capabilities achieve their objective of improving system security by being used in place of forgeable <a href="/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a>. A forgeable reference (for example, a <a href="/wiki/Path_(computing)" title="Path (computing)">path name</a>) identifies an object, but does not specify which access rights are appropriate for that object and the user program which holds that reference. Consequently, any attempt to access the referenced object must be validated by the operating system, based on the <a href="/wiki/Ambient_authority" title="Ambient authority">ambient authority</a> of the requesting program, typically via the use of an <a href="/wiki/Access-control_list" title="Access-control list">access-control list</a> (ACL). Instead, in a system with capabilities, the mere fact that a user program possesses that capability entitles it to use the referenced object in accordance with the rights that are specified by that capability. In theory, a system with capabilities removes the need for any access control list or similar mechanism by giving all entities all and only the capabilities they will actually need.
+</p><p>A capability is typically implemented as a <a href="/wiki/Privilege_(computing)" title="Privilege (computing)">privileged</a> <a href="/wiki/Data_structure" title="Data structure">data structure</a> that consists of a section that specifies access rights, and a section that uniquely identifies the object to be accessed. The user does not access the data structure or object directly, but instead via a <a href="/wiki/Handle_(computing)" title="Handle (computing)">handle</a>. In practice, it is used much like a <a href="/wiki/File_descriptor" title="File descriptor">file descriptor</a> in a traditional operating system (a traditional handle), but to access every object on the system. Capabilities are typically stored by the operating system in a list, with some mechanism in place to prevent the program from directly modifying the contents of the capability (so as to forge access rights or change the object it points to). Some systems have also been based on <a href="/wiki/Capability-based_addressing" title="Capability-based addressing">capability-based addressing</a> (hardware support for capabilities), such as <a href="/wiki/Plessey_System_250" title="Plessey System 250">Plessey System 250</a>.
+</p><p>Programs possessing capabilities can perform functions on them, such as passing them on to other programs, converting them to a less-privileged version, or deleting them. The operating system must ensure that only specific operations can occur to the capabilities in the system, in order to maintain the integrity of the security policy.
+</p><p>Capabilities as discussed in this article should not be confused with Portable Operating System Interface (<a href="/wiki/POSIX" title="POSIX">POSIX</a>) 1e/2c "<a href="#POSIX_capabilities">Capabilities</a>". The latter are coarse-grained privileges that cannot be transferred between processes.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Examples">Examples</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=2" title="Edit section: Examples"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>A capability is defined to be a protected <a href="/wiki/Object_(computer_science)" title="Object (computer science)">object</a> reference which, by virtue of its possession by a user process, grants that process the capability (hence the name) to interact with an object in certain ways. Those ways might include reading data associated with an object, modifying the object, executing the data in the object as a process, and other conceivable access rights. The capability logically consists of a reference that uniquely identifies a particular object and a set of one or more of these rights.
+</p><p>Suppose that, in a user process's memory space, there exists the following string:
+</p>
+<pre>/etc/passwd
+</pre>
+<p>Although this identifies a unique object on the system, it does not specify access rights and hence is not a capability. Suppose there is instead the following pair of values:
+</p>
+<pre>/etc/passwd
+O_RDWR
+</pre>
+<p>This pair identifies an object along with a set of access rights. The pair, however, is still not a capability because the user process's <i>possession</i> of these values says nothing about whether that access would actually be legitimate.
+</p><p>Now suppose that the user program successfully executes the following statement:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="s">&quot;/etc/passwd&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">O_RDWR</span><span class="p">);</span>
+</pre></div>
+<p>The variable <code>fd</code> now contains the index of a file descriptor in the process's file descriptor table. This file descriptor <i>is</i> a capability. Its existence in the process's file descriptor table is sufficient to show that the process does indeed have legitimate access to the object. A key feature of this arrangement is that the file descriptor table is in <a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">kernel memory</a> and cannot be directly manipulated by the user program.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Sharing_between_processes">Sharing between processes</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=3" title="Edit section: Sharing between processes"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>In traditional operating systems, programs often communicate with each other and with storage using references like those in the first two examples. Path names are often passed as command-line parameters, sent via sockets, and stored on disk. These references are not capabilities, and must be validated before they can be used. In these systems, a central question is "on whose <i>authority</i> is a given reference to be evaluated?" This becomes a critical issue especially for processes which must act on behalf of two different authority-bearing entities. They become susceptible to a programming error known as the <a href="/wiki/Confused_deputy_problem" title="Confused deputy problem">confused deputy problem</a>, very frequently resulting in a <a href="/wiki/Security_hole" class="mw-redirect" title="Security hole">security hole</a>.
+</p><p>In a capability-based system, the capabilities themselves are passed between processes and storage using a mechanism that is known by the operating system to maintain the integrity of those capabilities.
+</p><p>One novel approach to solving this problem involves the use of an <a href="/wiki/Orthogonal_persistence" class="mw-redirect" title="Orthogonal persistence">orthogonally persistent</a> operating system. In such a system, there is no need for entities to be discarded and their capabilities be invalidated, and hence require an ACL-like mechanism to restore those capabilities at a later time. The operating system maintains the integrity and security of the capabilities contained within all storage, both volatile and nonvolatile, at all times; in part by performing all <a href="/wiki/Serialization" title="Serialization">serialization</a> tasks by itself, rather than requiring user programs to do so, as is the case in most operating systems. Because user programs are relieved of this responsibility, there is no need to trust them to reproduce only legal capabilities, nor to validate requests for access using an <a href="/wiki/Access_control" title="Access control">access control</a> mechanism. An example implementation is the <a href="/wiki/Flex_machine" title="Flex machine">Flex machine</a> from the early 1980s.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="POSIX_capabilities">POSIX capabilities</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=4" title="Edit section: POSIX capabilities"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>Portable Operating System Interface (POSIX) draft 1003.1e specifies a concept of permissions called "capabilities". However, POSIX capabilities differ from capabilities in this article. A POSIX capability is not associated with any object; a process having CAP_NET_BIND_SERVICE capability can listen on any TCP port under 1024. This system is found in Linux.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span class="cite-bracket">&#91;</span>1<span class="cite-bracket">&#93;</span></a></sup>
+</p><p>In contrast, <a href="/wiki/Capsicum_(Unix)" title="Capsicum (Unix)">Capsicum</a> Unix hybridizes a true capability-system model with a Unix design and POSIX API. Capsicum capabilities are a refined form of file descriptor, a delegable right between processes and additional object types beyond classic POSIX, such as processes, can be referenced via capabilities. In Capsicum capability mode, processes are unable to utilize global namespaces (such as the filesystem namespace) to look up objects, and must instead inherit or be delegated them. This system is found natively in FreeBSD, but patches are available to other systems.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span class="cite-bracket">&#91;</span>2<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Implementations">Implementations</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=5" title="Edit section: Implementations"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>Notable research and commercial systems employing capability-based security include the following:
+</p>
+<ul><li><a href="/wiki/Tahoe-LAFS" title="Tahoe-LAFS">Tahoe-LAFS</a>, an open-source capability-based filesystem</li>
+<li><a href="/wiki/GNOSIS" title="GNOSIS">GNOSIS</a>, an operating system developed at <a href="/wiki/Tymshare" title="Tymshare">Tymshare</a>
+<ul><li><a href="/wiki/KeyKOS" title="KeyKOS">KeyKOS</a>, successor to GNOSIS
+<ul><li>EROS, The <a href="/wiki/Extremely_Reliable_Operating_System" class="mw-redirect" title="Extremely Reliable Operating System">Extremely Reliable Operating System</a>, successor to KeyKOS
+<ul><li><a href="/wiki/CapROS" title="CapROS">CapROS</a>, a project to further develop the EROS code base for commercial use</li></ul></li></ul></li></ul></li>
+<li><a href="/wiki/Cambridge_CAP_computer" class="mw-redirect" title="Cambridge CAP computer">Cambridge CAP computer</a></li>
+<li><a href="/wiki/Hydra_(operating_system)" title="Hydra (operating system)">Hydra (operating system)</a>, part of the <a href="/wiki/C.mmp" title="C.mmp">C.mmp</a> project at <a href="/wiki/Carnegie_Mellon_University" title="Carnegie Mellon University">Carnegie Mellon University</a></li>
+<li>StarOS, part of the CM* project at <a href="/wiki/Carnegie_Mellon_University" title="Carnegie Mellon University">Carnegie Mellon University</a></li>
+<li>IBM <a href="/wiki/System/38" class="mw-redirect" title="System/38">System/38</a> and <a href="/wiki/AS/400" class="mw-redirect" title="AS/400">AS/400</a></li>
+<li><a href="/wiki/Intel_iAPX_432" title="Intel iAPX 432">Intel iAPX 432</a></li>
+<li><a href="/wiki/Plessey_250" class="mw-redirect" title="Plessey 250">Plessey System 250</a></li>
+<li><a href="/wiki/Flex_machine" title="Flex machine">Flex</a></li>
+<li><a href="/wiki/L4_microkernel_family" title="L4 microkernel family">L4 microkernel family</a>:
+<ul><li>OKL4 from Open Kernel Labs</li>
+<li>seL4 from NICTA</li>
+<li>Fiasco.OC and NOVA from <a href="/wiki/TU_Dresden" title="TU Dresden">TU Dresden</a></li></ul></li>
+<li><a href="/wiki/Amoeba_(operating_system)" title="Amoeba (operating system)">Amoeba</a> distributed operating system</li>
+<li><a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a> <a href="/wiki/Capsicum_(Unix)" title="Capsicum (Unix)">Capsicum</a><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span class="cite-bracket">&#91;</span>3<span class="cite-bracket">&#93;</span></a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span class="cite-bracket">&#91;</span>4<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><a href="/wiki/Genode" title="Genode">Genode</a><sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span class="cite-bracket">&#91;</span>5<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><a href="/wiki/Google_Fuchsia" class="mw-redirect" title="Google Fuchsia">Google Fuchsia</a><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span class="cite-bracket">&#91;</span>6<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><a href="/wiki/HarmonyOS" title="HarmonyOS">HarmonyOS</a> (<a href="/wiki/OpenHarmony" title="OpenHarmony">OpenHarmony</a>) <sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span class="cite-bracket">&#91;</span>7<span class="cite-bracket">&#93;</span></a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span class="cite-bracket">&#91;</span>8<span class="cite-bracket">&#93;</span></a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span class="cite-bracket">&#91;</span>9<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><a href="/wiki/Phantom_OS" title="Phantom OS">Phantom OS</a><sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span class="cite-bracket">&#91;</span>10<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><a href="/wiki/WebAssembly" title="WebAssembly">WebAssembly</a> System Interface (WASI)</li></ul>
+<div class="mw-heading mw-heading2"><h2 id="References">References</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=6" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<style data-mw-deduplicate="TemplateStyles:r1239543626">.mw-parser-output .reflist{margin-bottom:0.5em;list-style-type:decimal}@media screen{.mw-parser-output .reflist{font-size:90%}}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://manned.org/capabilities.7">capabilities(7)</a></code></span>&#160;–&#160;<a href="/wiki/Linux" title="Linux">Linux</a> Programmer's <a href="/wiki/Man_page" title="Man page">Manual</a> – Overview, Conventions and Miscellanea</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://www.freebsd.org/cgi/man.cgi?query=capsicum&amp;sektion=4">capsicum(4)</a></code></span>&#160;–&#160;<a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a> Kernel Interfaces <a href="/wiki/Man_page" title="Man page">Manual</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1238218222">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free.id-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited.id-lock-limited a,.mw-parser-output .id-lock-registration.id-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription.id-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-free a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-limited a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-registration a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-subscription a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .cs1-ws-icon a{background-size:contain;padding:0 1em 0 0}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:var(--color-error,#d33)}.mw-parser-output .cs1-visible-error{color:var(--color-error,#d33)}.mw-parser-output .cs1-maint{display:none;color:#085;margin-left:0.3em}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}@media screen{.mw-parser-output .cs1-format{font-size:95%}html.skin-theme-clientpref-night .mw-parser-output .cs1-maint{color:#18911f}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .cs1-maint{color:#18911f}}</style><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.freebsd.org/cgi/man.cgi?capsicum(4)">"Capsicum(4)"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Capsicum%284%29&amp;rft_id=https%3A%2F%2Fwww.freebsd.org%2Fcgi%2Fman.cgi%3Fcapsicum%284%29&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.cl.cam.ac.uk/research/security/capsicum/papers/2010usenix-security-capsicum-website.pdf">Capsicum: practical capabilities for UNIX</a>. Retrieved 9 July 2024</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://rudd-o.com/linux-and-free-software/genode-os-a-breath-of-fresh-air-in-operating-system-and-software-security">"Genode OS: a breath of fresh air in operating system and software security"</a>. <i>Rudd-O.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2023-12-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Rudd-O.com&amp;rft.atitle=Genode+OS%3A+a+breath+of+fresh+air+in+operating+system+and+software+security&amp;rft_id=https%3A%2F%2Frudd-o.com%2Flinux-and-free-software%2Fgenode-os-a-breath-of-fresh-air-in-operating-system-and-software-security&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.engadget.com/2016-08-13-google-fuchsia-operating-system.html">"Google's Fuchsia operating system runs on virtually anything"</a>. <i>Engadget</i>. 2016-08-14<span class="reference-accessdate">. Retrieved <span class="nowrap">2023-12-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Engadget&amp;rft.atitle=Google%27s+Fuchsia+operating+system+runs+on+virtually+anything&amp;rft.date=2016-08-14&amp;rft_id=https%3A%2F%2Fwww.engadget.com%2F2016-08-13-google-fuchsia-operating-system.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFDěcký" class="citation web cs1">Děcký, Martin. <a rel="nofollow" class="external text" href="https://d3s.mff.cuni.cz/files/teaching/nswi161/martin-decky-microkernels-capabilities.pdf">"Microkernel-based and Capability-based Operating Systems"</a> <span class="cs1-format">(PDF)</span>. <i>D3S</i><span class="reference-accessdate">. Retrieved <span class="nowrap">23 December</span> 2023</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=D3S&amp;rft.atitle=Microkernel-based+and+Capability-based+Operating+Systems&amp;rft.aulast=D%C4%9Bck%C3%BD&amp;rft.aufirst=Martin&amp;rft_id=https%3A%2F%2Fd3s.mff.cuni.cz%2Ffiles%2Fteaching%2Fnswi161%2Fmartin-decky-microkernels-capabilities.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://github.com/openharmony/docs/blob/master/en/application-dev/security/accesstoken-overview.md">"docs/en/application-dev/security/accesstoken-overview.md at master · openharmony/docs"</a>. <i>GitHub</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2024-05-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=GitHub&amp;rft.atitle=docs%2Fen%2Fapplication-dev%2Fsecurity%2Faccesstoken-overview.md+at+master+%C2%B7+openharmony%2Fdocs&amp;rft_id=https%3A%2F%2Fgithub.com%2Fopenharmony%2Fdocs%2Fblob%2Fmaster%2Fen%2Fapplication-dev%2Fsecurity%2Faccesstoken-overview.md&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFDARKNAVY2024" class="citation web cs1">DARKNAVY (2024-06-11). <a rel="nofollow" class="external text" href="https://www.darknavy.org/blog/avss_report_kernel/">"AVSS Report: System Security Adversarial Capability Preliminary Evaluation of iOS, Android, and HarmonyOS - Kernel"</a>. <i>DARKNAVY</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2024-07-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=DARKNAVY&amp;rft.atitle=AVSS+Report%3A+System+Security+Adversarial+Capability+Preliminary+Evaluation+of+iOS%2C+Android%2C+and+HarmonyOS+-+Kernel&amp;rft.date=2024-06-11&amp;rft.au=DARKNAVY&amp;rft_id=https%3A%2F%2Fwww.darknavy.org%2Fblog%2Favss_report_kernel%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFDziuba" class="citation web cs1">Dziuba, Ted. <a rel="nofollow" class="external text" href="https://www.theregister.com/2009/02/03/phantom_russian_os/">"Russian rides Phantom to OS immortality"</a>. <i>The Register</i><span class="reference-accessdate">. Retrieved <span class="nowrap">31 December</span> 2023</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Register&amp;rft.atitle=Russian+rides+Phantom+to+OS+immortality&amp;rft.aulast=Dziuba&amp;rft.aufirst=Ted&amp;rft_id=https%3A%2F%2Fwww.theregister.com%2F2009%2F02%2F03%2Fphantom_russian_os%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<ul><li>Levy, Henry M., <i>*<a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=538134&amp;dl=ACM&amp;coll=&amp;CFID=15151515&amp;CFTOKEN=6184618">Capability-Based Computer Systems</a></i>, Digital Equipment Corporation 1984. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-932376-22-3" title="Special:BookSources/0-932376-22-3">0-932376-22-3</a>. An electronic version is available <a rel="nofollow" class="external text" href="http://www.cs.washington.edu/homes/levy/capabook/">here</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20031029002231/http://www.eros-os.org/">The EROS Project</a></li>
+<li><a href="/wiki/E_programming_language" class="mw-redirect" title="E programming language">E</a>, a programming language based around capability security (<a rel="nofollow" class="external text" href="http://www.erights.org/">ERights.org</a>)</li>
+<li>Mark S. Miller, Ka-Ping Yee, Jonathan Shapiro. <i>Capability Myths Demolished</i>, Technical Report SRL2003-02, Systems Research Laboratory, Johns Hopkins University. <a rel="nofollow" class="external text" href="http://srl.cs.jhu.edu/pubs/SRL2003-02.pdf">Available online.</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.washington.edu/homes/levy/capabook/Chapter5.pdf">The Cambridge CAP Computer</a>, Levy, 1988</li></ul>
+<div class="mw-heading mw-heading2"><h2 id="Further_reading">Further reading</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=7" title="Edit section: Further reading"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<ul><li><a href="/wiki/Capability-based_addressing" title="Capability-based addressing">Capability-based addressing</a>: <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFTheodore_A._Linden1976" class="citation journal cs1">Theodore A. Linden (December 1976). "Operating System Structures to Support Security and Reliable Software". <i><a href="/wiki/ACM_Computing_Surveys" title="ACM Computing Surveys">ACM Computing Surveys</a></i>. <b>8</b> (4): 409–445. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F356678.356682">10.1145/356678.356682</a>. <a href="/wiki/Hdl_(identifier)" class="mw-redirect" title="Hdl (identifier)">hdl</a>:<span class="id-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://hdl.handle.net/2027%2Fmdp.39015086560037">2027/mdp.39015086560037</a></span>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="https://search.worldcat.org/issn/0360-0300">0360-0300</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:16720589">16720589</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+Computing+Surveys&amp;rft.atitle=Operating+System+Structures+to+Support+Security+and+Reliable+Software&amp;rft.volume=8&amp;rft.issue=4&amp;rft.pages=409-445&amp;rft.date=1976-12&amp;rft_id=info%3Ahdl%2F2027%2Fmdp.39015086560037&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A16720589%23id-name%3DS2CID&amp;rft.issn=0360-0300&amp;rft_id=info%3Adoi%2F10.1145%2F356678.356682&amp;rft.au=Theodore+A.+Linden&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACapability-based+security" class="Z3988"></span></li>
+<li><a href="/wiki/Li_Gong_(computer_scientist)" title="Li Gong (computer scientist)">Li Gong</a>, <i><a rel="nofollow" class="external text" href="http://doi.ieeecomputersociety.org/10.1109/SECPRI.1989.36277">A Secure Identity-Based Capability System</a></i>, sp, p.&#160;56, 1989 IEEE Symposium on Security and Privacy, 1989</li>
+<li><a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=361070&amp;dl=ACM&amp;coll=&amp;CFID=15151515&amp;CFTOKEN=6184618">Capability-based addressing</a></li>
+<li><a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=850709&amp;dl=ACM&amp;coll=&amp;CFID=15151515&amp;CFTOKEN=6184618">A hardware implementation of capability-based addressing</a></li>
+<li><a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=850701&amp;coll=&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618">An implementation of capabilities on the PDP-11/45</a></li>
+<li><a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=801885&amp;dl=ACM&amp;coll=&amp;CFID=15151515&amp;CFTOKEN=6184618">IBM System/38 support for capability-based addressing</a></li>
+<li><a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=319163&amp;dl=ACM&amp;coll=&amp;CFID=15151515&amp;CFTOKEN=6184618">EROS: a fast capability system</a></li></ul>
+<p>POSIX "capabilities" in Linux:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://www.friedhoff.org/posixfilecaps.html">POSIX Capabilities &amp; Files</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/library/l-posixcap/">POSIX file capabilities: Parceling the power of root</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.linuxjournal.com/magazine/making-root-unprivileged">Making Root Unprivileged</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.sevagas.com/?POSIX-file-capabilities-the-dark">Security issues and new risks linked to POSIX file capabilities</a></li>
+<li><a rel="nofollow" class="external text" href="http://man7.org/linux/man-pages/man7/capabilities.7.html">Linux manual page for "capabilities(7)"</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.vultr.com/docs/working-with-linux-capabilities">Working with Linux capabilities</a></li></ul>
+<div class="mw-heading mw-heading2"><h2 id="External_links">External links</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Capability-based_security&amp;action=edit&amp;section=8" title="Edit section: External links"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<ul><li><a rel="nofollow" class="external text" href="https://archive.today/20130112225523/http://www.eros-os.org/essays/capintro.html">"What is a Capability?"</a></li>
+<li><a rel="nofollow" class="external text" href="https://archive.today/20130414162939/http://www.eros-os.org/pipermail/cap-talk/2003-March/001133.html">Reviews of 'Capability Myths Demolished'</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cap-lore.com/CapTheory/index.html">Capability Theory by Sound Bytes</a></li></ul>
+<div class="navbox-styles"><style data-mw-deduplicate="TemplateStyles:r1129693374">.mw-parser-output .hlist dl,.mw-parser-output .hlist ol,.mw-parser-output .hlist ul{margin:0;padding:0}.mw-parser-output .hlist dd,.mw-parser-output .hlist dt,.mw-parser-output .hlist li{margin:0;display:inline}.mw-parser-output .hlist.inline,.mw-parser-output .hlist.inline dl,.mw-parser-output .hlist.inline ol,.mw-parser-output .hlist.inline ul,.mw-parser-output .hlist dl dl,.mw-parser-output .hlist dl ol,.mw-parser-output .hlist dl ul,.mw-parser-output .hlist ol dl,.mw-parser-output .hlist ol ol,.mw-parser-output .hlist ol ul,.mw-parser-output .hlist ul dl,.mw-parser-output .hlist ul ol,.mw-parser-output .hlist ul ul{display:inline}.mw-parser-output .hlist .mw-empty-li{display:none}.mw-parser-output .hlist dt::after{content:": "}.mw-parser-output .hlist dd::after,.mw-parser-output .hlist li::after{content:" · ";font-weight:bold}.mw-parser-output .hlist dd:last-child::after,.mw-parser-output .hlist dt:last-child::after,.mw-parser-output .hlist li:last-child::after{content:none}.mw-parser-output .hlist dd dd:first-child::before,.mw-parser-output .hlist dd dt:first-child::before,.mw-parser-output .hlist dd li:first-child::before,.mw-parser-output .hlist dt dd:first-child::before,.mw-parser-output .hlist dt dt:first-child::before,.mw-parser-output .hlist dt li:first-child::before,.mw-parser-output .hlist li dd:first-child::before,.mw-parser-output .hlist li dt:first-child::before,.mw-parser-output .hlist li li:first-child::before{content:" (";font-weight:normal}.mw-parser-output .hlist dd dd:last-child::after,.mw-parser-output .hlist dd dt:last-child::after,.mw-parser-output .hlist dd li:last-child::after,.mw-parser-output .hlist dt dd:last-child::after,.mw-parser-output .hlist dt dt:last-child::after,.mw-parser-output .hlist dt li:last-child::after,.mw-parser-output .hlist li dd:last-child::after,.mw-parser-output .hlist li dt:last-child::after,.mw-parser-output .hlist li li:last-child::after{content:")";font-weight:normal}.mw-parser-output .hlist ol{counter-reset:listitem}.mw-parser-output .hlist ol>li{counter-increment:listitem}.mw-parser-output .hlist ol>li::before{content:" "counter(listitem)"\a0 "}.mw-parser-output .hlist dd ol>li:first-child::before,.mw-parser-output .hlist dt ol>li:first-child::before,.mw-parser-output .hlist li ol>li:first-child::before{content:" ("counter(listitem)"\a0 "}</style><style data-mw-deduplicate="TemplateStyles:r1236075235">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}body.skin--responsive .mw-parser-output .navbox-image img{max-width:none!important}@media print{body.ns-0 .mw-parser-output .navbox{display:none!important}}</style></div><div role="navigation" class="navbox" aria-labelledby="Object-capability_security" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1129693374"><style data-mw-deduplicate="TemplateStyles:r1239400231">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}html.skin-theme-clientpref-night .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}@media(prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}}@media print{.mw-parser-output .navbar{display:none!important}}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Object-capability_security" title="Template:Object-capability security"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Object-capability_security" title="Template talk:Object-capability security"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a href="/wiki/Special:EditPage/Template:Object-capability_security" title="Special:EditPage/Template:Object-capability security"><abbr title="Edit this template">e</abbr></a></li></ul></div><div id="Object-capability_security" style="font-size:114%;margin:0 4em"><a href="/wiki/Object-capability_model" title="Object-capability model">Object-capability</a> security</div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Concepts</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Principle_of_least_privilege" title="Principle of least privilege">Principle of least privilege</a> (PoLP)</li>
+<li><a href="/wiki/Confused_deputy_problem" title="Confused deputy problem">Confused deputy problem</a></li>
+<li><a href="/wiki/Ambient_authority" title="Ambient authority">Ambient authority</a></li>
+<li><a href="/wiki/File_descriptor" title="File descriptor">File descriptor</a></li>
+<li><a href="/wiki/C-list_(computer_security)" title="C-list (computer security)">C-list</a></li>
+<li><a href="/wiki/Object-capability_model" title="Object-capability model">Object-capability model</a></li>
+<li><a class="mw-selflink selflink">Capability-based security</a></li>
+<li><a href="/wiki/Capability-based_addressing" title="Capability-based addressing">Capability-based addressing</a></li>
+<li><a href="/wiki/Zooko%27s_triangle" title="Zooko&#39;s triangle">Zooko's triangle</a></li>
+<li><a href="/wiki/Petname" title="Petname">Petnames</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Operating_system" title="Operating system">Operating systems</a>, <a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">kernels</a></th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Capsicum_(Unix)" title="Capsicum (Unix)">Capsicum</a></li>
+<li><a href="/wiki/Fuchsia_(operating_system)" title="Fuchsia (operating system)">Fuchsia</a></li>
+<li><a href="/wiki/Genode" title="Genode">Genode</a></li>
+<li><a href="/wiki/GNOSIS" title="GNOSIS">GNOSIS</a> → <a href="/wiki/KeyKOS" title="KeyKOS">KeyKOS</a> → <a href="/wiki/EROS_(microkernel)" title="EROS (microkernel)">EROS</a> → <a href="/wiki/CapROS" title="CapROS">CapROS</a></li>
+<li><a href="/wiki/Hydra_(operating_system)" title="Hydra (operating system)">Hydra</a></li>
+<li><a href="/wiki/IMAX_432" title="IMAX 432">iMAX 432</a></li>
+<li><a href="/wiki/Midori_(operating_system)" title="Midori (operating system)">Midori</a></li>
+<li><a href="/wiki/NLTSS" title="NLTSS">NLTSS</a></li>
+<li><a href="/wiki/L4_microkernel_family#High_assurance:_seL4" title="L4 microkernel family">seL4</a></li>
+<li><a href="/wiki/HarmonyOS" title="HarmonyOS">HarmonyOS</a> (<a href="/wiki/HarmonyOS_NEXT" title="HarmonyOS NEXT">HarmonyOS NEXT</a>)</li>
+<li><a href="/wiki/Phantom_OS" title="Phantom OS">Phantom OS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Programming_language" title="Programming language">Programming languages</a></th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Caja_project" title="Caja project">Cajita</a></li>
+<li><a href="/wiki/E_(programming_language)" title="E (programming language)">E</a></li>
+<li><a href="/wiki/Joe-E" title="Joe-E">Joe-E</a></li>
+<li><a href="/wiki/Joule_(programming_language)" title="Joule (programming language)">Joule</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/File_system" title="File system">File systems</a></th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Tahoe-LAFS" title="Tahoe-LAFS">Tahoe-LAFS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Specialised hardware</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/BiiN" title="BiiN">BiiN</a></li>
+<li><a href="/wiki/CAP_computer" title="CAP computer">Cambridge CAP</a></li>
+<li><a href="/wiki/Flex_machine" title="Flex machine">Flex</a></li>
+<li><a href="/wiki/IBM_System/38" title="IBM System/38">IBM System/38</a></li>
+<li><a href="/wiki/Intel_iAPX_432" title="Intel iAPX 432">Intel iAPX 432</a></li>
+<li><a href="/wiki/Plessey_System_250" title="Plessey System 250">Plessey System 250</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.eqiad.main‐7cc4c44f5f‐gvr5k
+Cached time: 20240903185723
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.383 seconds
+Real time usage: 0.478 seconds
+Preprocessor visited node count: 1098/1000000
+Post‐expand include size: 26214/2097152 bytes
+Template argument size: 1148/2097152 bytes
+Highest expansion depth: 14/100
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 38939/5000000 bytes
+Lua time usage: 0.250/10.000 seconds
+Lua memory usage: 4496947/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  431.206      1 -total
+ 41.51%  178.986      1 Template:Reflist
+ 33.12%  142.805      7 Template:Cite_web
+ 26.74%  115.305      1 Template:Object-capability_security
+ 26.21%  113.033      1 Template:Navbox
+ 22.97%   99.047      1 Template:Short_description
+ 14.09%   60.773      2 Template:Pagetype
+  5.47%   23.598      4 Template:Main_other
+  4.94%   21.313      1 Template:ISBN
+  4.78%   20.618      1 Template:SDcat
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:539717-0!canonical and timestamp 20240903185723 and revision id 1233505110. Rendering was triggered because: page-view
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Capability-based_security&amp;oldid=1233505110">https://en.wikipedia.org/w/index.php?title=Capability-based_security&amp;oldid=1233505110</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Computer_security_models" title="Category:Computer security models">Computer security models</a></li><li><a href="/wiki/Category:Access_control" title="Category:Access control">Access control</a></li><li><a href="/wiki/Category:Capability_systems" title="Category:Capability systems">Capability systems</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 9 July 2024, at 12:29<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply. By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Capability-based_security&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="/static/images/footer/wikimedia-button.svg" width="84" height="29" alt="Wikimedia Foundation" loading="lazy"></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="/w/resources/assets/poweredby_mediawiki.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul></ul>
+</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-6f79cc4fbd-nfr4r","wgBackendResponseTime":1160,"wgPageParseReport":{"limitreport":{"cputime":"0.383","walltime":"0.478","ppvisitednodes":{"value":1098,"limit":1000000},"postexpandincludesize":{"value":26214,"limit":2097152},"templateargumentsize":{"value":1148,"limit":2097152},"expansiondepth":{"value":14,"limit":100},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":38939,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  431.206      1 -total"," 41.51%  178.986      1 Template:Reflist"," 33.12%  142.805      7 Template:Cite_web"," 26.74%  115.305      1 Template:Object-capability_security"," 26.21%  113.033      1 Template:Navbox"," 22.97%   99.047      1 Template:Short_description"," 14.09%   60.773      2 Template:Pagetype","  5.47%   23.598      4 Template:Main_other","  4.94%   21.313      1 Template:ISBN","  4.78%   20.618      1 Template:SDcat"]},"scribunto":{"limitreport-timeusage":{"value":"0.250","limit":"10.000"},"limitreport-memusage":{"value":4496947,"limit":52428800}},"cachereport":{"origin":"mw-web.eqiad.main-7cc4c44f5f-gvr5k","timestamp":"20240903185723","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Capability-based security","url":"https:\/\/en.wikipedia.org\/wiki\/Capability-based_security","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1094291","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1094291","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-03-20T18:24:47Z","dateModified":"2024-07-09T12:29:32Z","headline":"computer safety concept and one of the existing security models for design of secure computing systems"}</script>
+</body>
+</html>

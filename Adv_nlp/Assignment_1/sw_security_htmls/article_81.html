@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-enabled skin-theme-clientpref-day vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Threat model - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-enabled skin-theme-clientpref-day vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy",
+"wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"02050fd7-00fa-4d29-9495-73d105565470","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Threat_model","wgTitle":"Threat model","wgCurRevisionId":1244222841,"wgRevisionId":1244222841,"wgArticleId":4624596,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: multiple names: authors list","All articles with bare URLs for citations","Articles with bare URLs for citations from August 2024","Articles with bare URLs for citations from March 2022","Articles with PDF format bare URLs for citations","Articles with short description","Short description is different from Wikidata","All articles with unsourced statements","Articles with unsourced statements from May 2022","Computer security exploits"],"wgPageViewLanguage":"en",
+"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Threat_model","wgRelevantArticleId":4624596,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgCiteReferencePreviewsActive":false,"wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":20000,"wgULSCurrentAutonym":"English","wgRelatedArticlesCompat":[],"wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":
+"Q7797194","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","ext.wikimediamessages.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mediawiki.page.media","site","mediawiki.page.ready","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp",
+"ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.growthExperiments.SuggestedEditSession","wikibase.sidebar.tracking"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cext.wikimediamessages.styles%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.43.0-wmf.23">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="Threat model - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="//en.m.wikipedia.org/wiki/Threat_model">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Threat_model&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Threat_model">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Threat_model rootpage-Threat_model skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/wikipedia.png" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.8125em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"  >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:CreateAccount&amp;returnto=Threat+model" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="/w/index.php?title=Special:UserLogin&amp;returnto=Threat+model" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Threat+model" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Threat+model" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Evolution_of_technology-centric_threat_modeling"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Evolution_of_technology-centric_threat_modeling">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>Evolution of technology-centric threat modeling</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Evolution_of_technology-centric_threat_modeling-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Threat_Modeling_Manifesto"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Threat_Modeling_Manifesto">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">2</span>
+				<span>Threat Modeling Manifesto</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Threat_Modeling_Manifesto-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Threat_modeling_frameworks"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Threat_modeling_frameworks">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">3</span>
+				<span>Threat modeling frameworks</span>
+			</div>
+		</a>
+		
+			<button aria-controls="toc-Threat_modeling_frameworks-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Threat modeling frameworks subsection</span>
+			</button>
+		
+		<ul id="toc-Threat_modeling_frameworks-sublist" class="vector-toc-list">
+			<li id="toc-STRIDE"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#STRIDE">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">3.1</span>
+					<span>STRIDE</span>
+				</div>
+			</a>
+			
+			<ul id="toc-STRIDE-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-PASTA"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#PASTA">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">3.2</span>
+					<span>PASTA</span>
+				</div>
+			</a>
+			
+			<ul id="toc-PASTA-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Trike"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Trike">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">3.3</span>
+					<span>Trike</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Trike-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-VAST"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#VAST">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">3.4</span>
+					<span>VAST</span>
+				</div>
+			</a>
+			
+			<ul id="toc-VAST-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-&#039;The_Hybrid&#039;_Threat_Modeling_Method"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#&#039;The_Hybrid&#039;_Threat_Modeling_Method">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">3.5</span>
+					<span>'The Hybrid' Threat Modeling Method</span>
+				</div>
+			</a>
+			
+			<ul id="toc-&#039;The_Hybrid&#039;_Threat_Modeling_Method-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Generally_accepted_technology_threat_modeling_processes"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Generally_accepted_technology_threat_modeling_processes">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">4</span>
+				<span>Generally accepted technology threat modeling processes</span>
+			</div>
+		</a>
+		
+			<button aria-controls="toc-Generally_accepted_technology_threat_modeling_processes-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Generally accepted technology threat modeling processes subsection</span>
+			</button>
+		
+		<ul id="toc-Generally_accepted_technology_threat_modeling_processes-sublist" class="vector-toc-list">
+			<li id="toc-Visual_representations_based_on_data_flow_diagrams"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Visual_representations_based_on_data_flow_diagrams">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">4.1</span>
+					<span>Visual representations based on data flow diagrams</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Visual_representations_based_on_data_flow_diagrams-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Threat_modeling_tools"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Threat_modeling_tools">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">5</span>
+				<span>Threat modeling tools</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Threat_modeling_tools-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Further_fields_of_application"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Further_fields_of_application">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">6</span>
+				<span>Further fields of application</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Further_fields_of_application-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-References"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#References">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">7</span>
+				<span>References</span>
+			</div>
+		</a>
+		
+		<ul id="toc-References-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Threat model</span></h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 3 languages"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-3" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">3 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_de_menace" title="Modèle de menace – French" lang="fr" hreflang="fr" data-title="Modèle de menace" data-language-autonym="Français" data-language-local-name="French" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-uk mw-list-item"><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%B7%D0%B0%D0%B3%D1%80%D0%BE%D0%B7" title="Модель загроз – Ukrainian" lang="uk" hreflang="uk" data-title="Модель загроз" data-language-autonym="Українська" data-language-local-name="Ukrainian" class="interlanguage-link-target"><span>Українська</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/%E5%A8%81%E8%84%85%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90" title="威脅模型分析 – Chinese" lang="zh" hreflang="zh" data-title="威脅模型分析" data-language-autonym="中文" data-language-local-name="Chinese" class="interlanguage-link-target"><span>中文</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7797194#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Threat_model" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="vector-tab-noicon mw-list-item"><a href="/wiki/Talk:Threat_model" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/Threat_model"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Threat_model&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=Threat_model&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="/wiki/Threat_model"><span>Read</span></a></li><li id="ca-more-edit" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Threat_model&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="/w/index.php?title=Threat_model&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Threat_model" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Threat_model" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Threat_model&amp;oldid=1244222841" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Threat_model&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Threat_model&amp;id=1244222841&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThreat_model"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThreat_model"><span>Download QR code</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7797194" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Threat_model&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Threat_model&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects emptyPortlet"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Process of identifying structural vulnerabilities</div>
+<p><b>Threat modeling</b> is a process by which potential threats, such as <a href="/wiki/Structural_vulnerability_(computing)" title="Structural vulnerability (computing)">structural vulnerabilities</a> or the absence of appropriate safeguards, can be identified and enumerated, and countermeasures prioritized.<sup id="cite_ref-:1_1-0" class="reference"><a href="#cite_note-:1-1"><span class="cite-bracket">&#91;</span>1<span class="cite-bracket">&#93;</span></a></sup> The purpose of threat modeling is to provide defenders with a systematic analysis of what controls or defenses need to be included, given the nature of the system, the probable attacker's profile, the most likely attack vectors, and the assets most desired by an attacker. Threat modeling answers questions like <i>"Where am I most vulnerable to attack?"</i>, <i>"What are the most relevant threats?"</i>, and <i>"What do I need to do to safeguard against these threats?"</i>.
+</p><p>Conceptually, most people incorporate some form of threat modeling in their daily life and don't even realize it.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2022)">citation needed</span></a></i>&#93;</sup> Commuters use threat modeling to consider what might go wrong during the morning journey to work and to take preemptive action to avoid possible accidents. Children engage in threat modeling when determining the best path toward an intended goal while avoiding the playground bully. In a more formal sense, threat modeling has been used to prioritize military defensive preparations since antiquity.
+</p>
+<meta property="mw:PageProp/toc" />
+<div class="mw-heading mw-heading2"><h2 id="Evolution_of_technology-centric_threat_modeling">Evolution of technology-centric threat modeling</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=1" title="Edit section: Evolution of technology-centric threat modeling"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>Shortly after shared computing made its debut in the early 1960s, individuals began seeking ways to exploit security vulnerabilities for personal gain.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span class="cite-bracket">&#91;</span>2<span class="cite-bracket">&#93;</span></a></sup> As a result, engineers and computer scientists soon began developing threat modeling concepts for information technology systems.
+</p><p>Early technology-centered threat modeling methodologies were based on the concept of architectural patterns<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span class="cite-bracket">&#91;</span>3<span class="cite-bracket">&#93;</span></a></sup> first presented by <a href="/wiki/Christopher_Alexander" title="Christopher Alexander">Christopher Alexander</a> in 1977. In 1988 Robert Barnard developed and successfully applied the first profile for an IT-system attacker.
+</p><p>In 1994, Edward Amoroso put forth the concept of a "threat tree" in his book, "Fundamentals of Computer Security Technology.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span class="cite-bracket">&#91;</span>4<span class="cite-bracket">&#93;</span></a></sup>" The concept of a threat tree was based on decision tree diagrams. Threat trees graphically represent how a potential threat to an IT system can be exploited.
+</p><p>Independently, similar work was conducted by the <a href="/wiki/National_Security_Agency" title="National Security Agency">NSA</a> and <a href="/wiki/DARPA" title="DARPA">DARPA</a> on a structured graphical representation of how specific attacks against IT-systems could be executed. The resulting representation was called "<a href="/wiki/Attack_tree" title="Attack tree">attack trees</a>." In 1998 <a href="/wiki/Bruce_Schneier" title="Bruce Schneier">Bruce Schneier</a> published his analysis of cyber risks utilizing attack trees in his paper entitled "Toward a Secure System Engineering Methodology".<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span class="cite-bracket">&#91;</span>5<span class="cite-bracket">&#93;</span></a></sup> The paper proved to be a seminal contribution in the evolution of threat modeling for IT-systems. In Schneier's analysis, the attacker's goal is represented as a "root node," with the potential means of reaching the goal represented as "leaf nodes." Utilizing the attack tree in this way allowed cybersecurity professionals to systematically consider multiple attack vectors against any defined target.
+</p><p>In 1999, Microsoft cybersecurity professionals <a href="/wiki/Loren_Kohnfelder" title="Loren Kohnfelder">Loren Kohnfelder</a> and Praerit Garg developed a model for considering attacks relevant to the Microsoft Windows development environment.  (<a href="/wiki/STRIDE_(security)" class="mw-redirect" title="STRIDE (security)">STRIDE</a><sup id="cite_ref-:1_1-1" class="reference"><a href="#cite_note-:1-1"><span class="cite-bracket">&#91;</span>1<span class="cite-bracket">&#93;</span></a></sup> is an <a href="/wiki/Acrostic" title="Acrostic">acrostic</a> for: Spoofing identity, Tampering with data, Repudiation, Information disclosure, Denial of service, Elevation of privilege) The resultant mnemonic helps security professionals systematically determine how a potential attacker could utilize any threat included in STRIDE.
+</p><p>In 2003, OCTAVE<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span class="cite-bracket">&#91;</span>6<span class="cite-bracket">&#93;</span></a></sup> (Operationally Critical Threat, Asset, and Vulnerability Evaluation) method, an operations-centric threat modeling methodology, was introduced with a focus on organizational risk management.
+</p><p>In 2004, Frank Swiderski and <a href="/wiki/Window_Snyder" title="Window Snyder">Window Snyder</a> wrote "Threat Modeling," published by Microsoft press. In it they developed the concept of using threat models to create secure applications.
+</p><p>In 2014, Ryan Stillions expressed the idea that <a href="/wiki/Cyber_threat_hunting" title="Cyber threat hunting">cyber threats</a> should be expressed with different semantic levels, and proposed the DML (Detection Maturity Level) model.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span class="cite-bracket">&#91;</span>7<span class="cite-bracket">&#93;</span></a></sup> An attack is an instantiation of a threat scenario which is caused by a specific attacker with a specific goal in mind and a strategy for reaching that goal. The goal and strategy represent the highest semantic levels of the DML model. This is followed by the TTP (Tactics, Techniques and Procedures) which represent intermediate semantic levels. The lowest semantic levels of the DML model are the tools used by the attacker, host and observed network artifacts such as packets and payloads, and finally atomic indicators such as IP addresses at the lowest semantic level. Current <a href="/wiki/Security_information_and_event_management" title="Security information and event management">SIEM</a> (Security Information and Event Management) tools typically only provide indicators at the lowest semantic levels. There is therefore a need to develop SIEM tools that can provide threat indicators at higher semantic levels.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span class="cite-bracket">&#91;</span>8<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Threat_Modeling_Manifesto">Threat Modeling Manifesto</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=2" title="Edit section: Threat Modeling Manifesto"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The threat modeling manifesto is a document published in 2020 by threat modeling authorities in order to clearly state the core values and principles that every threat modeler should know and follow.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span class="cite-bracket">&#91;</span>9<span class="cite-bracket">&#93;</span></a></sup>
+</p><p>In 2024 the same group of authors followed up the Manifesto with a Threat Modeling Capabilities document, which "...provides a catalog of capabilities to help you cultivate value from your Threat Modeling practice".<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span class="cite-bracket">&#91;</span>10<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Threat_modeling_frameworks">Threat modeling frameworks</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=3" title="Edit section: Threat modeling frameworks"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>Conceptually, a threat modeling practice flows from a methodology. Numerous threat modeling methodologies are available for implementation. Typically, threat modeling has been implemented using one of five approaches independently: asset-centric, attacker-centric, software-centric, value and stakeholder-centric, and hybrid. Based on the volume of published online content, the methodologies discussed below are the most well known.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="STRIDE">STRIDE</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=4" title="Edit section: STRIDE"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The <a href="/wiki/STRIDE_(security)" class="mw-redirect" title="STRIDE (security)">STRIDE</a> was created in 1999 at Microsoft as a mnemonic for developers to find 'threats to our products'.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span class="cite-bracket">&#91;</span>11<span class="cite-bracket">&#93;</span></a></sup> STRIDE can be used as a simple prompt or checklist, or in more structured approaches such as STRIDE per element.  STRIDE, Patterns and Practices, and Asset/entry point were amongst the threat modeling approaches developed and published by Microsoft.   References to "the" Microsoft methodology commonly mean STRIDE and Data Flow Diagrams.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="PASTA">PASTA</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=5" title="Edit section: PASTA"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The Process for Attack Simulation and Threat Analysis (PASTA) is a seven-step, risk-centric methodology.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span class="cite-bracket">&#91;</span>12<span class="cite-bracket">&#93;</span></a></sup> It provides a seven-step process for aligning business objectives and technical requirements, taking into account compliance issues and business analysis. The intent of the method is to provide a dynamic threat identification, enumeration, and scoring process. Once the threat model is completed, security subject matter experts develop a detailed analysis of the identified threats. Finally, appropriate security controls can be enumerated. This methodology is intended to provide an attacker-centric view of the application and infrastructure from which defenders can develop an asset-centric mitigation strategy.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Trike">Trike</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=6" title="Edit section: Trike"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The focus of the Trike methodology<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span class="cite-bracket">&#91;</span>13<span class="cite-bracket">&#93;</span></a></sup> is using threat models as a risk-management tool. Within this framework, threat models are used to satisfy the security auditing process. Threat models are based on a "requirements model." The requirements model establishes the stakeholder-defined "acceptable" level of risk assigned to each asset class. Analysis of the requirements model yields a threat model from which threats are enumerated and assigned risk values. The completed threat model is used to construct a risk model based on asset, roles, actions, and calculated risk exposure.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="VAST">VAST</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=7" title="Edit section: VAST"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>The Visual, Agile and Simple Threat (VAST) methodology,<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span class="cite-bracket">&#91;</span>14<span class="cite-bracket">&#93;</span></a></sup> is based on ThreatModeler, a commercial automated threat-modeling platform. VAST requires creating two types of models: application threat models and operational threat models. Application threat models use process-flow diagrams, representing the architectural point of view. Operational threat models are created from an attacker point of view based on DFDs. This approach allows for the integration of VAST into the organization's development and DevOps lifecycles.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span class="cite-bracket">&#91;</span>15<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="'The_Hybrid'_Threat_Modeling_Method"><span id=".27The_Hybrid.27_Threat_Modeling_Method"></span>'The Hybrid' Threat Modeling Method</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=8" title="Edit section: &#039;The Hybrid&#039; Threat Modeling Method"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>Researchers created this method to combine the positive elements of different methodologies.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span class="cite-bracket">&#91;</span>16<span class="cite-bracket">&#93;</span></a></sup><sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span class="cite-bracket">&#91;</span>17<span class="cite-bracket">&#93;</span></a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span class="cite-bracket">&#91;</span>18<span class="cite-bracket">&#93;</span></a></sup> This methodology combines different methodologies, including SQUARE<sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span class="cite-bracket">&#91;</span>19<span class="cite-bracket">&#93;</span></a></sup> and the Security Cards<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span class="cite-bracket">&#91;</span>20<span class="cite-bracket">&#93;</span></a></sup> and Personae Non Gratae.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span class="cite-bracket">&#91;</span>21<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Generally_accepted_technology_threat_modeling_processes">Generally accepted technology threat modeling processes</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=9" title="Edit section: Generally accepted technology threat modeling processes"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>All IT-related threat modeling processes start with creating a visual representation of the application, infrastructure or both being analyzed. The application or infrastructure is decomposed into various elements to aid in the analysis. Once completed, the visual representation is used to identify and enumerate potential threats. Further analysis of the model regarding risks associated with identified threats, prioritization of threats, and enumeration of the appropriate mitigating controls depends on the methodological basis for the threat model process being utilized. Threat modeling approaches can focus on the system in use, attackers, or assets. 
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Visual_representations_based_on_data_flow_diagrams">Visual representations based on data flow diagrams</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=10" title="Edit section: Visual representations based on data flow diagrams"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/wiki/File:Data_Flow_Diagram_-_Online_Banking_Application.jpg" class="mw-file-description"><img alt="Data Flow Diagram – Online Banking Application" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Data_Flow_Diagram_-_Online_Banking_Application.jpg/220px-Data_Flow_Diagram_-_Online_Banking_Application.jpg" decoding="async" width="220" height="165" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Data_Flow_Diagram_-_Online_Banking_Application.jpg/330px-Data_Flow_Diagram_-_Online_Banking_Application.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/Data_Flow_Diagram_-_Online_Banking_Application.jpg/440px-Data_Flow_Diagram_-_Online_Banking_Application.jpg 2x" data-file-width="728" data-file-height="546" /></a><figcaption></figcaption></figure>
+<p>Most threat modeling approaches use <a href="/wiki/Data-flow_diagram" title="Data-flow diagram">data flow diagrams</a> (DFD). DFDs were developed in the 1970s as tool for system engineers to communicate, on a high level, how an application caused data to flow, be stored, and manipulated by the infrastructure upon which the application runs. Traditionally, DFDs utilize only four unique symbols: data flows, data stores, processes, and interactors. In the early 2000s, an additional symbol, trust boundaries, were added to improve the usefulness of DFDs for threat modeling.
+</p><p>Once the application-infrastructure system is decomposed into its five elements, security experts consider each identified threat entry point against all known threat categories. Once the potential threats are identified, mitigating security controls can be enumerated or additional analysis can be performed.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Threat_modeling_tools">Threat modeling tools</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=11" title="Edit section: Threat modeling tools"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<ul><li>Microsoft's free <b>Threat Modeling Tool</b> (formerly SDL Threat Modeling Tool),<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span class="cite-bracket">&#91;</span>22<span class="cite-bracket">&#93;</span></a></sup> also uses the Microsoft threat modeling methodology, is based on DFD and identifies threats based on the STRIDE threat classification system. It is mainly intended for general use.</li>
+<li><b>IriusRisk</b> provides both a community and a commercial version of the tool. This tool focuses on creating and maintaining a living threat model throughout the <a href="/wiki/Systems_development_life_cycle" title="Systems development life cycle">SDLC</a>. It drives the process using fully customizable questionnaires and risk model libraries, and connects to several other different tools (OWASP ZAP, BDD-Security, Threadfix) to enable automation.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span class="cite-bracket">&#91;</span>23<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><b>securiCAD</b> is a threat modeling and risk management tool from the Scandinavian company foreseeti.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24"><span class="cite-bracket">&#91;</span>24<span class="cite-bracket">&#93;</span></a></sup> It is intended for enterprise cybersecurity management, from <a href="/wiki/CISO" class="mw-redirect" title="CISO">CISO</a> to security engineer, including technician. securiCAD performs automated attack simulations on current and future IT architectures, identifies and quantifies risks globally, including structural vulnerabilities, and provides decision support based on results. securiCAD is available in commercial and community editions.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25"><span class="cite-bracket">&#91;</span>25<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><b>SD Elements by Security Compass</b> is a software security requirements management platform that includes automated threat modeling capabilities. A set of threats is generated by filling out a short questionnaire on the application's technical details and compliance factors. Countermeasures are included in the form of actionable tasks for developers that can be tracked and managed across the SDLC.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26"><span class="cite-bracket">&#91;</span>26<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><b>OWASP Threat Dragon</b> is a modeling tool used to create threat model diagrams as part of a secure development lifecycle. Threat Dragon follows the values and principles of the threat modeling manifesto. It can be used to record possible threats and decide on their mitigations, as well as giving a visual indication of the threat model components and threat surfaces. Threat Dragon runs either as a web application or as a desktop application. Threat Dragon supports STRIDE / LINDDUN / CIA / DIE / PLOT4ai, provides modeling diagrams and implements a rule engine to auto-generate threats and their mitigations.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27"><span class="cite-bracket">&#91;</span>27<span class="cite-bracket">&#93;</span></a></sup></li>
+<li><b>OWASP pytm</b> is a Pythonic framework for threat modeling and the first Threat-Model-as-Code tool: The system is first defined in Python using the elements and properties described in the pytm framework. Based on this definition, pytm can generate a Data Flow Diagram (DFD), a Sequence Diagram and most important of all, threats to the system.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28"><span class="cite-bracket">&#91;</span>28<span class="cite-bracket">&#93;</span></a></sup></li></ul>
+<div class="mw-heading mw-heading2"><h2 id="Further_fields_of_application">Further fields of application</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=12" title="Edit section: Further fields of application"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>Threat modeling is being applied not only to IT but also to other areas such as vehicle,<sup id="cite_ref-29" class="reference"><a href="#cite_note-29"><span class="cite-bracket">&#91;</span>29<span class="cite-bracket">&#93;</span></a></sup><sup id="cite_ref-30" class="reference"><a href="#cite_note-30"><span class="cite-bracket">&#91;</span>30<span class="cite-bracket">&#93;</span></a></sup> <a href="/wiki/Building_automation" title="Building automation">building</a> and <a href="/wiki/Home_automation" title="Home automation">home automation</a>.<sup id="cite_ref-:0_31-0" class="reference"><a href="#cite_note-:0-31"><span class="cite-bracket">&#91;</span>31<span class="cite-bracket">&#93;</span></a></sup> In this context, threats to security and privacy like information about the inhabitant's movement profiles, working times, and health situations are modeled as well as physical or network-based attacks. The latter could make use of more and more available smart building features, i.e., sensors (e.g., to spy on the inhabitant) and actuators (e.g., to unlock doors).<sup id="cite_ref-:0_31-1" class="reference"><a href="#cite_note-:0-31"><span class="cite-bracket">&#91;</span>31<span class="cite-bracket">&#93;</span></a></sup>
+</p>
+<div class="mw-heading mw-heading2"><h2 id="References">References</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Threat_model&amp;action=edit&amp;section=13" title="Edit section: References"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<style data-mw-deduplicate="TemplateStyles:r1239543626">.mw-parser-output .reflist{margin-bottom:0.5em;list-style-type:decimal}@media screen{.mw-parser-output .reflist{font-size:90%}}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-:1-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-:1_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:1_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1238218222">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free.id-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited.id-lock-limited a,.mw-parser-output .id-lock-registration.id-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription.id-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-free a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-limited a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-registration a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .id-lock-subscription a,body:not(.skin-timeless):not(.skin-minerva) .mw-parser-output .cs1-ws-icon a{background-size:contain;padding:0 1em 0 0}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:var(--color-error,#d33)}.mw-parser-output .cs1-visible-error{color:var(--color-error,#d33)}.mw-parser-output .cs1-maint{display:none;color:#085;margin-left:0.3em}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}@media screen{.mw-parser-output .cs1-format{font-size:95%}html.skin-theme-clientpref-night .mw-parser-output .cs1-maint{color:#18911f}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .cs1-maint{color:#18911f}}</style><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx">"The STRIDE Threat Model"</a>. Microsoft. 2016.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+STRIDE+Threat+Model&amp;rft.pub=Microsoft&amp;rft.date=2016&amp;rft_id=https%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fee823878%28v%3Dcs.20%29.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFMcMillan2012" class="citation web cs1">McMillan, Robert (2012). <a rel="nofollow" class="external text" href="https://www.wired.com/2012/01/computer-password/">"The World's First Computer Password? It Was Useless Too"</a>. Wired Business.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+World%27s+First+Computer+Password%3F+It+Was+Useless+Too&amp;rft.pub=Wired+Business&amp;rft.date=2012&amp;rft.aulast=McMillan&amp;rft.aufirst=Robert&amp;rft_id=https%3A%2F%2Fwww.wired.com%2F2012%2F01%2Fcomputer-password%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFShostack2014" class="citation web cs1"><a href="/w/index.php?title=Adam_Shostack&amp;action=edit&amp;redlink=1" class="new" title="Adam Shostack (page does not exist)">Shostack, Adam</a> (2014). <a rel="nofollow" class="external text" href="http://threatmodelingbook.com">"Threat Modeling: Designing for Security"</a>. John Wiley &amp; Sons Inc: Indianapolis.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Threat+Modeling%3A+Designing+for+Security&amp;rft.pub=John+Wiley+%26+Sons+Inc%3A+Indianapolis&amp;rft.date=2014&amp;rft.aulast=Shostack&amp;rft.aufirst=Adam&amp;rft_id=http%3A%2F%2Fthreatmodelingbook.com&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFAmoroso1994" class="citation book cs1">Amoroso, Edward G (1994). <a rel="nofollow" class="external text" href="http://dl.acm.org/citation.cfm?id=179237"><i>Fundamentals of Computer Security Technology</i></a>. AT&amp;T Bell Labs. Prentice-Hall: Upper Saddle River. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780131089297" title="Special:BookSources/9780131089297"><bdi>9780131089297</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fundamentals+of+Computer+Security+Technology&amp;rft.pub=AT%26T+Bell+Labs.+Prentice-Hall%3A+Upper+Saddle+River.&amp;rft.date=1994&amp;rft.isbn=9780131089297&amp;rft.aulast=Amoroso&amp;rft.aufirst=Edward+G&amp;rft_id=http%3A%2F%2Fdl.acm.org%2Fcitation.cfm%3Fid%3D179237&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFSchneier1998" class="citation web cs1">Schneier, Bruce; et&#160;al. (1998). <a rel="nofollow" class="external text" href="https://www.schneier.com/academic/paperfiles/paper-secure-methodology.pdf">"Toward A Secure System Engineering Methodology"</a> <span class="cs1-format">(PDF)</span>. National Security Agency: Washington.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Toward+A+Secure+System+Engineering+Methodology&amp;rft.pub=National+Security+Agency%3A+Washington&amp;rft.date=1998&amp;rft.aulast=Schneier&amp;rft.aufirst=Bruce&amp;rft_id=https%3A%2F%2Fwww.schneier.com%2Facademic%2Fpaperfiles%2Fpaper-secure-methodology.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFAlberts2003" class="citation web cs1">Alberts, Christopher (2003). <a rel="nofollow" class="external text" href="http://www.itgovernanceusa.com/files/Octave.pdf">"Introduction to the OCTAVE® Approach"</a> <span class="cs1-format">(PDF)</span>. Software Engineering Institute, Carnegie Mellon: Pittsburgh.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Introduction+to+the+OCTAVE%C2%AE+Approach&amp;rft.pub=Software+Engineering+Institute%2C+Carnegie+Mellon%3A+Pittsburgh.&amp;rft.date=2003&amp;rft.aulast=Alberts&amp;rft.aufirst=Christopher&amp;rft_id=http%3A%2F%2Fwww.itgovernanceusa.com%2Ffiles%2FOctave.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFStillions2014" class="citation web cs1">Stillions, Ryan (2014). <a rel="nofollow" class="external text" href="http://ryanstillions.blogspot.no/2014/04/the-dml-model_21.html">"The DML Model"</a>. <i>Ryan Stillions security blog</i>. Ryan Stillions.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Ryan+Stillions+security+blog&amp;rft.atitle=The+DML+Model&amp;rft.date=2014&amp;rft.aulast=Stillions&amp;rft.aufirst=Ryan&amp;rft_id=http%3A%2F%2Fryanstillions.blogspot.no%2F2014%2F04%2Fthe-dml-model_21.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFBromander2016" class="citation web cs1">Bromander, Siri (2016). <a rel="nofollow" class="external text" href="http://folk.uio.no/josang/papers/BJE2016-STIDS.pdf">"Semantic Cyberthreat Modelling"</a> <span class="cs1-format">(PDF)</span>. Semantic Technology for Intelligence, Defence and Security (STIDS 2016).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Semantic+Cyberthreat+Modelling&amp;rft.pub=Semantic+Technology+for+Intelligence%2C+Defence+and+Security+%28STIDS+2016%29&amp;rft.date=2016&amp;rft.aulast=Bromander&amp;rft.aufirst=Siri&amp;rft_id=http%3A%2F%2Ffolk.uio.no%2Fjosang%2Fpapers%2FBJE2016-STIDS.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.threatmodelingmanifesto.org//">"Threat Modeling Manifesto"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Threat+Modeling+Manifesto&amp;rft_id=https%3A%2F%2Fwww.threatmodelingmanifesto.org%2F%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.threatmodelingmanifesto.org/capabilities/">"Threat Modeling Capabilities"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Threat+Modeling+Capabilities&amp;rft_id=https%3A%2F%2Fwww.threatmodelingmanifesto.org%2Fcapabilities%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="STRIDE" class="citation web cs1">Kohnfelder, Loren; Garg, Praerit. <a rel="nofollow" class="external text" href="https://shostack.org/files/microsoft/The-Threats-To-Our-Products.docx">"Threats to Our Products"</a>. Microsoft<span class="reference-accessdate">. Retrieved <span class="nowrap">4 Feb</span> 2024</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Threats+to+Our+Products&amp;rft.pub=Microsoft&amp;rft.aulast=Kohnfelder&amp;rft.aufirst=Loren&amp;rft.au=Garg%2C+Praerit&amp;rft_id=https%3A%2F%2Fshostack.org%2Ffiles%2Fmicrosoft%2FThe-Threats-To-Our-Products.docx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span> </span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFUcedavélez2015" class="citation web cs1">Ucedavélez, Tony and Marco M. Morana (2015). <a rel="nofollow" class="external text" href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470500964.html#">"Risk Centric Threat Modeling: Process for Attack Simulation and Threat Analysis"</a>. John Wiley &amp; Sons: Hobekin.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Risk+Centric+Threat+Modeling%3A+Process+for+Attack+Simulation+and+Threat+Analysis&amp;rft.pub=John+Wiley+%26+Sons%3A+Hobekin&amp;rft.date=2015&amp;rft.aulast=Ucedav%C3%A9lez&amp;rft.aufirst=Tony+and+Marco+M.+Morana&amp;rft_id=http%3A%2F%2Fwww.wiley.com%2FWileyCDA%2FWileyTitle%2FproductCd-0470500964.html%23&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFEddington2005" class="citation web cs1">Eddington, Michael, Brenda Larcom, and Eleanor Saitta (2005). <a rel="nofollow" class="external text" href="http://octotrike.org/papers">"Trike v1 Methodology Document"</a>. <i>Octotrike.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Octotrike.org&amp;rft.atitle=Trike+v1+Methodology+Document&amp;rft.date=2005&amp;rft.aulast=Eddington&amp;rft.aufirst=Michael%2C+Brenda+Larcom%2C+and+Eleanor+Saitta&amp;rft_id=http%3A%2F%2Foctotrike.org%2Fpapers&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_web" title="Template:Cite web">cite web</a>}}</code>:  CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFFruhlinger2020" class="citation web cs1">Fruhlinger, Josh (2020-04-15). <a rel="nofollow" class="external text" href="https://www.csoonline.com/article/3537370/threat-modeling-explained-a-process-for-anticipating-cyber-attacks.html">"Threat modeling explained: A process for anticipating cyber attacks"</a>. <i>CSO Online</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2022-02-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=CSO+Online&amp;rft.atitle=Threat+modeling+explained%3A+A+process+for+anticipating+cyber+attacks&amp;rft.date=2020-04-15&amp;rft.aulast=Fruhlinger&amp;rft.aufirst=Josh&amp;rft_id=https%3A%2F%2Fwww.csoonline.com%2Farticle%2F3537370%2Fthreat-modeling-explained-a-process-for-anticipating-cyber-attacks.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://insights.sei.cmu.edu/blog/threat-modeling-12-available-methods/">"Threat Modeling: 12 Available Methods"</a>. <i>SEI Blog</i>. 2 December 2018<span class="reference-accessdate">. Retrieved <span class="nowrap">2022-02-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=SEI+Blog&amp;rft.atitle=Threat+Modeling%3A+12+Available+Methods&amp;rft.date=2018-12-02&amp;rft_id=https%3A%2F%2Finsights.sei.cmu.edu%2Fblog%2Fthreat-modeling-12-available-methods%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://insights.sei.cmu.edu/blog/the-hybrid-threat-modeling-method/">"The Hybrid Threat Modeling Method"</a>. 22 April 2018.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Hybrid+Threat+Modeling+Method&amp;rft.date=2018-04-22&amp;rft_id=https%3A%2F%2Finsights.sei.cmu.edu%2Fblog%2Fthe-hybrid-threat-modeling-method%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=516617">"A Hybrid Threat Modeling Method"</a>. 27 March 2018.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+Hybrid+Threat+Modeling+Method&amp;rft.date=2018-03-27&amp;rft_id=https%3A%2F%2Fresources.sei.cmu.edu%2Flibrary%2Fasset-view.cfm%3Fassetid%3D516617&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFTarandachColes2020" class="citation book cs1">Tarandach, Izar; Coles, Matthew J. (24 November 2020). <i>Threat Modeling: A Practical Guide for Development Teams</i>. O'Reilly Media, Incorporated. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1492056553" title="Special:BookSources/978-1492056553"><bdi>978-1492056553</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Threat+Modeling%3A+A+Practical+Guide+for+Development+Teams&amp;rft.pub=O%27Reilly+Media%2C+Incorporated&amp;rft.date=2020-11-24&amp;rft.isbn=978-1492056553&amp;rft.aulast=Tarandach&amp;rft.aufirst=Izar&amp;rft.au=Coles%2C+Matthew+J.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=7657">"Security Quality Requirements Engineering Technical Report"</a>. 31 October 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Security+Quality+Requirements+Engineering+Technical+Report&amp;rft.date=2005-10-31&amp;rft_id=https%3A%2F%2Fresources.sei.cmu.edu%2Flibrary%2Fasset-view.cfm%3Fassetid%3D7657&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://securitycards.cs.washington.edu/">https://securitycards.cs.washington.edu/</a> <sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Bare_URLs" title="Wikipedia:Bare URLs"><span title="A full citation is required to prevent link rot. (August 2024)">bare URL</span></a></i>&#93;</sup></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.computer.org/csdl/magazine/so/2014/04/mso2014040028/13rRUwInvrl">"CSDL &#124; IEEE Computer Society"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=CSDL+%26%23124%3B+IEEE+Computer+Society&amp;rft_id=https%3A%2F%2Fwww.computer.org%2Fcsdl%2Fmagazine%2Fso%2F2014%2F04%2Fmso2014040028%2F13rRUwInvrl&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://cloudblogs.microsoft.com/microsoftsecure/2015/10/07/whats-new-with-microsoft-threat-modeling-tool-2016/">"What's New with Microsoft Threat Modeling Tool 2016"</a>. <i>Microsoft Secure Blog</i>. Microsoft. 2015.</span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://continuumsecurity.net/">"Irius Risk Risk Management Tool"</a>. Continuum Security. 2016.</span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.foreseeti.com/securicad-enterprise/">"foreseeti - securiCAD"</a>. <i>foreseeti.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">November 27,</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=foreseeti.com&amp;rft.atitle=foreseeti+-+securiCAD&amp;rft_id=https%3A%2F%2Fwww.foreseeti.com%2Fsecuricad-enterprise%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.foreseeti.com/">"Cyber Threat Modelling and Risk Management - securiCAD by foreseeti"</a>. foreseeti.</span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.securitycompass.com/sdelements/">"SD Elements by Security Compass"</a>. <i>www.securitycompass.com</i>. Retrieved 2017-03-24.</span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://owasp.org/www-project-threat-dragon/">"OWASP Threat Dragon"</a>.</span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://owasp.org/www-project-pytm/">"OWASP pytm"</a>.</span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://publications.lib.chalmers.se/records/fulltext/252083/local_252083.pdf">http://publications.lib.chalmers.se/records/fulltext/252083/local_252083.pdf</a> <sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Bare_URLs" title="Wikipedia:Bare URLs"><span title="A full citation of this PDF document is required to prevent link rot. (March 2022)">bare URL PDF</span></a></i>&#93;</sup></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFHamadPrevelakisNolte2016" class="citation journal cs1">Hamad, Mohammad; Prevelakis, Vassilis; Nolte, Marcus (November 2016). <a rel="nofollow" class="external text" href="https://publikationsserver.tu-braunschweig.de/servlets/MCRFileNodeServlet/dbbs_derivate_00044573/Hamad_Towards_Comprehensive_Threat_Modeling_for_Vehicles.pdf">"Towards Comprehensive Threat Modeling for Vehicles"</a> <span class="cs1-format">(PDF)</span>. <i>Institute of Control Engineering</i>. Publications Institute of Computer and Network Engineering. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.24355%2Fdbbs.084-201806251532-0">10.24355/dbbs.084-201806251532-0</a><span class="reference-accessdate">. Retrieved <span class="nowrap">11 March</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Institute+of+Control+Engineering&amp;rft.atitle=Towards+Comprehensive+Threat+Modeling+for+Vehicles&amp;rft.date=2016-11&amp;rft_id=info%3Adoi%2F10.24355%2Fdbbs.084-201806251532-0&amp;rft.aulast=Hamad&amp;rft.aufirst=Mohammad&amp;rft.au=Prevelakis%2C+Vassilis&amp;rft.au=Nolte%2C+Marcus&amp;rft_id=https%3A%2F%2Fpublikationsserver.tu-braunschweig.de%2Fservlets%2FMCRFileNodeServlet%2Fdbbs_derivate_00044573%2FHamad_Towards_Comprehensive_Threat_Modeling_for_Vehicles.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+<li id="cite_note-:0-31"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_31-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_31-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1238218222"><cite id="CITEREFMeyerHaaseEckertKlauer2016" class="citation book cs1">Meyer, D.; Haase, J.; Eckert, M.; Klauer, B. (2016-07-01). "A threat-model for building and home automation". <i>2016 IEEE 14th International Conference on Industrial Informatics (INDIN)</i>. pp.&#160;860–866. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2FINDIN.2016.7819280">10.1109/INDIN.2016.7819280</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-5090-2870-2" title="Special:BookSources/978-1-5090-2870-2"><bdi>978-1-5090-2870-2</bdi></a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:12725362">12725362</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=A+threat-model+for+building+and+home+automation&amp;rft.btitle=2016+IEEE+14th+International+Conference+on+Industrial+Informatics+%28INDIN%29&amp;rft.pages=860-866&amp;rft.date=2016-07-01&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A12725362%23id-name%3DS2CID&amp;rft_id=info%3Adoi%2F10.1109%2FINDIN.2016.7819280&amp;rft.isbn=978-1-5090-2870-2&amp;rft.aulast=Meyer&amp;rft.aufirst=D.&amp;rft.au=Haase%2C+J.&amp;rft.au=Eckert%2C+M.&amp;rft.au=Klauer%2C+B.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AThreat+model" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐api‐int.eqiad.main‐55dfbd78c7‐chqhn
+Cached time: 20240905193707
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.517 seconds
+Real time usage: 0.717 seconds
+Preprocessor visited node count: 1769/1000000
+Post‐expand include size: 40634/2097152 bytes
+Template argument size: 2338/2097152 bytes
+Highest expansion depth: 14/100
+Expensive parser function count: 4/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 81099/5000000 bytes
+Lua time usage: 0.325/10.000 seconds
+Lua memory usage: 5338841/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  632.357      1 -total
+ 71.56%  452.504      1 Template:Reflist
+ 54.23%  342.937     19 Template:Cite_web
+ 15.99%  101.106      1 Template:Short_description
+ 10.34%   65.397      3 Template:Fix
+  9.92%   62.730      2 Template:Pagetype
+  8.69%   54.940      1 Template:Citation_needed
+  5.87%   37.089      4 Template:Category_handler
+  3.75%   23.724      3 Template:Cite_book
+  3.35%   21.199      4 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4624596-0!canonical and timestamp 20240905193707 and revision id 1244222841. Rendering was triggered because: api-parse
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Threat_model&amp;oldid=1244222841">https://en.wikipedia.org/w/index.php?title=Threat_model&amp;oldid=1244222841</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Category</a>: <ul><li><a href="/wiki/Category:Computer_security_exploits" title="Category:Computer security exploits">Computer security exploits</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">CS1 maint: multiple names: authors list</a></li><li><a href="/wiki/Category:All_articles_with_bare_URLs_for_citations" title="Category:All articles with bare URLs for citations">All articles with bare URLs for citations</a></li><li><a href="/wiki/Category:Articles_with_bare_URLs_for_citations_from_August_2024" title="Category:Articles with bare URLs for citations from August 2024">Articles with bare URLs for citations from August 2024</a></li><li><a href="/wiki/Category:Articles_with_bare_URLs_for_citations_from_March_2022" title="Category:Articles with bare URLs for citations from March 2022">Articles with bare URLs for citations from March 2022</a></li><li><a href="/wiki/Category:Articles_with_PDF_format_bare_URLs_for_citations" title="Category:Articles with PDF format bare URLs for citations">Articles with PDF format bare URLs for citations</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_May_2022" title="Category:Articles with unsourced statements from May 2022">Articles with unsourced statements from May 2022</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 5 September 2024, at 19:37<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">Creative Commons Attribution-ShareAlike License 4.0</a><a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" style="display:none;"></a>;
+additional terms may apply. By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Threat_model&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="/static/images/footer/wikimedia-button.svg" width="84" height="29" alt="Wikimedia Foundation" loading="lazy"></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="/w/resources/assets/poweredby_mediawiki.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul></ul>
+</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-6f79cc4fbd-6kxxp","wgBackendResponseTime":141,"wgPageParseReport":{"limitreport":{"cputime":"0.517","walltime":"0.717","ppvisitednodes":{"value":1769,"limit":1000000},"postexpandincludesize":{"value":40634,"limit":2097152},"templateargumentsize":{"value":2338,"limit":2097152},"expansiondepth":{"value":14,"limit":100},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":81099,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  632.357      1 -total"," 71.56%  452.504      1 Template:Reflist"," 54.23%  342.937     19 Template:Cite_web"," 15.99%  101.106      1 Template:Short_description"," 10.34%   65.397      3 Template:Fix","  9.92%   62.730      2 Template:Pagetype","  8.69%   54.940      1 Template:Citation_needed","  5.87%   37.089      4 Template:Category_handler","  3.75%   23.724      3 Template:Cite_book","  3.35%   21.199      4 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.325","limit":"10.000"},"limitreport-memusage":{"value":5338841,"limit":52428800}},"cachereport":{"origin":"mw-api-int.eqiad.main-55dfbd78c7-chqhn","timestamp":"20240905193707","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Threat model","url":"https:\/\/en.wikipedia.org\/wiki\/Threat_model","sameAs":"http:\/\/www.wikidata.org\/entity\/Q7797194","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q7797194","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-04-04T11:57:04Z","dateModified":"2024-09-05T19:37:03Z","headline":"process by which potential threats, such as structural vulnerabilities can be identified, enumerated, and prioritized \u2013 all from a hypothetical attacker\u2019s point of view"}</script>
+</body>
+</html>
